@@ -1,0 +1,251 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+html {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+body {
+    color: #fff;
+    background: #000;
+}
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background: transparent;
+    transition: all ease .5s;
+    z-index: 100;
+}
+.logo {
+    font-size: 32px;
+    font-weight: 600;
+    color: #fff;
+}
+.navlist {
+    display: flex;
+}
+.navlist a {
+    color: #fff;
+    margin: 0 30px;
+    padding: 2px;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    transition:  all ease .5s;
+}
+.navlist a:hover {
+    /* margin-bottom: 5px; */
+    border-bottom: 2px solid #fff;
+}
+.navlist a.active {
+    border-bottom: 2px solid #fff;
+}
+.right-nav {
+    display: flex;
+    align-items: center;
+}
+.h-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #f5dca8;
+    line-height: 1.4rem;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 30px;
+    margin-right: 20px;
+    transition: all ease .5s;
+}
+.h-btn:hover {
+    transform:  scale(1.1);
+    color: #000;
+    background: #fff;
+    border: 1px solid #000;
+}
+#menu-icon {
+    font-size: 1.8rem;
+    z-index: 100;
+    cursor: pointer;
+    display: none;
+}
+section {
+    padding: 0 10%;
+}
+.hero {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: url(../img/slider.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+}
+.container {
+    padding-top: 200px;
+}
+.container h6 {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 32px;
+}
+.container h1 {
+    font-size: 100px;
+    font-weight: bold;
+    margin: 0 0 32px;
+    line-height: 1;
+    font-family: 'Permanent Marker', cursive;
+    text-transform: uppercase;
+}
+.container h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+.container p {
+    max-width: 100%;
+    line-height: 2;
+    font-size: 15px;
+    margin-bottom: 50px;
+    width: 500px;
+    text-align: justify;
+}
+.container a {
+    display: inline-block;
+    color: #000;
+    background: #fff;
+    border: 2px solid #fff;
+    padding: 10px 27px;
+    line-height: 1.4;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all ease .5s;
+    border-radius: 30px;
+}
+.container a:hover {
+    transform: scale(1.1);
+    color: #fff;
+    background-color:transparent;
+    border: 1px solid #f5dca8;
+}
+.container a.cta {
+    border: 1px solid #f5dca8;
+    color: #fff;
+    background-color: transparent;
+    margin-left: 24px;
+    transition: all ease .5s;
+}
+.container a.cta:hover {
+    color: #000;
+    background: #fff;
+    border: 1px solid #fff;
+}
+.container a.cta i {
+    margin-right: 8px;
+}
+.social {
+    position: absolute;
+    bottom: 5%;
+    left: 13%;
+}
+.social i {
+    display: inline-block;
+    color: #f5dca8;
+    margin-right: 20px;
+    font-size: 28px;
+    transition: all ease .5s;
+}
+.social i:hover {
+    color: #fff;
+    transform: translateY(-6px);
+}
+@media (max-width: 1520px){
+    header {
+        padding: 17px 8%;
+    }
+    section {
+        padding: 0 8%;
+    }
+    .social {
+        left: 6%;
+    }
+    .container {
+        padding-top: 200px;
+    }
+}
+@media (max-width: 1024px) {
+    .container h1 {
+        font-size: 80px;
+        margin: 0 0 25px;
+    }
+    .container p {
+        margin-bottom: 30px;
+    }
+    .container h6 {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 912px) {
+    header {
+        padding: 17px 5%;
+    }
+    section {
+        padding: 0 5%;
+    }
+    .social {
+        left: 4%;
+    }
+}
+
+@media (max-width: 820px) {
+    #menu-icon {
+        display: block;
+    }
+    .navlist {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        padding: 50px 50px;
+        top: 0;
+        right: 0;
+        left: 100%;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: purple;
+        transition: all ease .5s;
+    }
+    .navlist a {
+        display: block;
+        padding: 0;
+        margin: 0 0 40px;
+        font-size: 24px;
+        font-weight: 400;
+        color: #f5dca8;
+        border-bottom:none;
+    }
+    .navlist a:hover,
+    .navlist a.active 
+        {
+        border-bottom:none ;
+        color: #fff;
+    }
+    .navlist.open {
+        left: 0;
+    }
+}
+@media (max-width: 535px) {
+    .container h1 {
+        font-size: 70px;
+    }
+    
+}
